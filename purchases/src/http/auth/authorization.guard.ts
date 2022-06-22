@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import {
   CanActivate,
   ExecutionContext,
   Injectable,
   UnauthorizedException,
 } from '@nestjs/common';
-import jwt from 'express-jwt';
+const jwt = require('express-jwt');
 import { expressJwtSecret } from 'jwks-rsa';
 import { ConfigService } from '@nestjs/config';
 import { promisify } from 'node:util';
